@@ -29,7 +29,9 @@ class dc_arm_driver_node:
         rospy.spin()
 
     def callback(self, msg):
+        rospy.loginfo("Recieve Command")
         if msg.data[0] == -1:
+            rospy.loginfo("Release All")
             self.release_all()
         else:
             for i in range(1, len(msg.data)):
