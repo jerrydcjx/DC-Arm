@@ -33,7 +33,7 @@ def main():
 # function pcaScenario 
 def pcaScenario():
     """Scenario to test servo"""
-    for i in range(nbPCAServo):
+    for i in range(5):
         for j in range(MIN_ANG[i],90,1):
             print("Send angle {} to Servo {}".format(j,i))
             pca.servo[i].angle = j
